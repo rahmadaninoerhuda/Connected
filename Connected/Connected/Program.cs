@@ -12,7 +12,7 @@ namespace Connected
         static void Main(string[] args)
         {
             string connectionString = GetConnectionString();
-            string query1 = "select * from Pembimbing_Akademik where BIK=333";
+            string query1 = "select * from Pembimbing_Akademik where NIK=333";
             using (SqlConnection cn = new SqlConnection(connectionString))
             {
                 SqlCommand cmd1 = new SqlCommand(query1, cn); cn.Open();
@@ -34,7 +34,7 @@ namespace Connected
         private static string GetConnectionString()
         {
             return "data source=LAPTOP-I5CF3Q9T;" +
-                    "database=ProdiTI; MultipleActiveResultsSets=True; User id=sa;Password=dedekgemes123";
+                    "database=ProdiTI;MultipleActiveResultSets=True;User id=sa;Password=dedekgemes123";
         }
     }
 }
